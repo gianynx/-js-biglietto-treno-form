@@ -1,0 +1,14 @@
+body {
+    background-image: linear-gradient(to right, #2D4B73, #253C59, #99B4BF, #D9B70D, #BF8D30);
+    font-family: 'Merriweather', serif;
+}
+
+#app {
+    padding-top: 80px;
+}
+
+input {
+    background-color: #3F7373;
+    border-style: none;
+    color: white;
+}
