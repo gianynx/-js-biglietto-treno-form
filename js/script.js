@@ -27,8 +27,9 @@ buttonCalc.addEventListener('click', function() {
     if (passengerAge >= 65) {
         totalPrice = totalPrice - discount_40;
     }
+    let message = 'Ticket price: ';
     const ticket = document.getElementById('ticket');
-    ticket.innerHTML = `${totalPrice.toFixed(2) + '€ !'}`;
+    ticket.innerHTML = `${message}${totalPrice.toFixed(2) + '€'}`;
     ticket.classList.remove ("d-none");
 });
 
