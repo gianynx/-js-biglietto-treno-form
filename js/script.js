@@ -8,8 +8,8 @@ const kmInput = app.querySelector('input[name="km"]');
 
 const button = document.querySelector('#btn');
 button.addEventListener('click', function() {
-    const kilometersNumber;
-    const passengerAge;
+    const kilometersNumber = 0;
+    const passengerAge = 0;
     const centsKm = 0.21;
     const ticketPrice = kilometersNumber * centsKm;
     let totalPrice = ticketPrice;
@@ -24,3 +24,5 @@ button.addEventListener('click', function() {
     let messagge = 'Il prezzo totale del biglietto è di ';
     document.getElementById("total_price").innerHTML = messagge + totalPrice.toFixed(2) + '€ !';
 });
+
+console.log(button);
