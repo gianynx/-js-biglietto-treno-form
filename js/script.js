@@ -6,10 +6,16 @@ const ageInput = app.querySelector('input[name="age"]');
 const kmInput = app.querySelector('input[name="km"]');
 // console.log(kmInput);
 
-const button = document.querySelector('#btn');
-button.addEventListener('click', function() {
-    const kilometersNumber = 0;
-    const passengerAge = 0;
+const buttonCalc = document.getElementById('btnCalc');
+// console.log(buttonCalc);
+
+const buttonCanc = document.getElementById('btnCanc');
+// console.log(buttonCanc);
+
+
+buttonCalc.addEventListener('click', function() {
+    let passengerAge = ageInput.value;
+    let kilometersNumber = kmInput.value;
     const centsKm = 0.21;
     const ticketPrice = kilometersNumber * centsKm;
     let totalPrice = ticketPrice;
@@ -21,8 +27,13 @@ button.addEventListener('click', function() {
     if (passengerAge >= 65) {
         totalPrice = totalPrice - discount_40;
     }
-    let messagge = 'Il prezzo totale del biglietto è di ';
-    document.getElementById("total_price").innerHTML = messagge + totalPrice.toFixed(2) + '€ !';
+    const ticket = document.getElementById('ticket');
+    ticket.innerHTML = `${totalPrice.toFixed(2) + '€ !'}`;
+    ticket.classList.remove ("d-none");
 });
 
-console.log(button);
+buttonCanc.addEventListener('click', function() {
+    ageInput.value = '';
+    kmInput.value = '';
+    ticket.classList.toggle ("d-none");
+});
