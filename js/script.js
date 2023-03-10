@@ -22,10 +22,10 @@ buttonCalc.addEventListener('click', function() {
     const discount_20 = (ticketPrice * 20) / 100;
     const discount_40 = (ticketPrice * 40) / 100;
     if (passengerAge < 18) {
-        totalPrice = totalPrice - discount_20;
+        totalPrice -= discount_20;
     }
     if (passengerAge >= 65) {
-        totalPrice = totalPrice - discount_40;
+        totalPrice -= discount_40;
     }
     let message = 'Ticket price: ';
     const ticket = document.getElementById('ticket');
